@@ -214,7 +214,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-                    $.post('https://script.google.com/macros/s/AKfycbwnpSCtEiUc_LB2QmAhoI7HDVBkL4sgJDRjOpSFGzCbIsu3AqwPqeEGpe0-_qdKgPZo/exec', data)
+                    $.post('https://script.google.com/macros/s/AKfycbw2Vw_0clsEYJR1KjGYWamRxXa0T4kOR6_nzEF2q1vmr-DC1DAOjrb_4Fn55gjv9zON/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -229,14 +229,28 @@ $(document).ready(function () {
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
     });
-
 });
 
+// const submittedNames = new Set();
+
+//         document.getElementById("data-form").addEventListener("submit", async function(event) {
+//             const nameInput = document.getElementById("name");
+//             const name = nameInput.value.trim();
+
+//             if (submittedNames.has(name)) {
+//                 alert("Name has already been submitted. Please use a different name.");
+//                 event.preventDefault(); // Prevent form submission
+//             } else {
+//                 submittedNames.add(name);
+
+//                 // Allow form submission to Formspree
+//             }
+//         });
 /********************** Extras **********************/
 
 // Google map
 function initMap() {
-    var location = {lat: 10.786800, lng: 106.684920};
+    var location = {lat: 10.786839223990599, lng: 106.6849420709829};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -250,7 +264,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 10.786800, lng: 106.684920};
+    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
